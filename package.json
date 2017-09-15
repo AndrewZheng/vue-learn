@@ -1,0 +1,19 @@
+{
+  "name": "vue-learn",
+  "version": "1.0.0",
+  "description": "learn how to build spa application by webpack & gulp & es6 &vue/vuex.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewZheng/vue-learn.git"
+  },
+  "author": "Andrew Zheng",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.8.2"
+  }
+}
