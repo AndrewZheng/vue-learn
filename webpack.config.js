@@ -16,27 +16,36 @@ module.exports = {
 		rules: [{
 			test: /\.css$/,
 			use: ['style-loader', 'css-loader', 'postcss-loader']
-		},{
+		},
+		{
+			test: /\.s[ac]ss$/,
+			exclude: /node_modules/,
+			loader: 'style-loader!css-loader!sass-loader'
+        },
+		{
 			test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
 			loader: 'url-loader',
 			options: {
 				limit: 10000,
 				name: 'img/[name]_[hash:7].[ext]'
 			}
-		},{
+		},
+		{
 			test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
 			loader: 'url-loader',
 			options: {
 				limit: 10000,
 				name: 'fonts/[name].[hash:7].[ext]'
 			}
-		},{
+		},
+		{
 			test: /\.css$/,
 			use: ExtractTextPlugin.extract({
 			  fallback: "style-loader",
 			  use: "css-loader"
 			})
-		},{
+		},
+		{
 			test: /\.vue$/,
 			loader: 'vue-loader',
 			options: {
@@ -74,7 +83,11 @@ module.exports = {
 		extensions: ['.js', '.json', '.vue', '.css']
 	},
 	plugins: [
-	    new HotModuleReplacementPlugin()
+	    new HotModuleReplacementPlugin(),
+		new ExtractTextPlugin({
+            filename: 'css/[name].css'
+        }),
+		new CleanWebpackPlugin(['dist'])
 	],
 	devServer: {
 		contentBase: './src',
