@@ -24,7 +24,7 @@ npm init -y
 
 ##初始化源码目录
 
-初始化项目package.json
+初始化项目package.json.
 在项目根目录下创建源码目录结构，通常源码目录是src或app，个人喜好是使用src:
 
 ##webpack/gulp/grunt对比和总结
