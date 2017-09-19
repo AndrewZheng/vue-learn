@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --open",
+    "dev": "webpack-dev-server --open --env debug",
     "start": "webpack-dev-server --inline",
     "build": "gulp pack --env debug",
     "build-online": "gulp pack --env production",
@@ -61,6 +61,7 @@
     "pug": "^2.0.0-rc.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "url-loader": "^0.5.9",
     "vue": "^2.4.2",
     "vue-loader": "^12.2.2",

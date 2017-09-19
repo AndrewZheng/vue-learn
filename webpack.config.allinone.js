@@ -19,12 +19,18 @@ var publicPath = '/';
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
+var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 //入口文件定义
 var entries = function () {
-    var jsDir = path.resolve(srcDir, 'scripts')
-    var entryFiles = glob.sync(jsDir + '/*.{js,jsx}')
+    var jsDir = path.resolve(srcDir, 'scripts');
+	var cssDir=path.resolve(srcDir, 'styles');
+	var imgDir=path.resolve(srcDir,'img');
+	
+    var entryFiles = glob.sync(jsDir + '/*.{js,jsx}');
+    var entryCssFiles=glob.sync(cssDir+'/*.{css,scss}');
+	var entryImgFiles=glob.sync(imgDir+'/*.{svg,jpeg,jpg,png,gif,ico}');
+
     var map = {};
 
     for (var i = 0; i < entryFiles.length; i++) {
@@ -32,6 +38,7 @@ var entries = function () {
         var filename = filePath.substring(filePath.lastIndexOf('\/') + 1, filePath.lastIndexOf('.'));
         map[filename] = filePath;
     }
+	
     return map;
 }
 
@@ -60,22 +67,25 @@ module.exports =function(options){
         extractCSS = new ExtractTextPlugin('styles/[contenthash:8].[name].min.css', {
             // 当allChunks指定为false时，css loader必须指定怎么处理
             allChunks: false
-        })
-        cssLoader = extractCSS.extract(['css?minimize'])
-        sassLoader = extractCSS.extract(['css?minimize', 'sass'])
+        });
+		
+        cssLoader = extractCSS.extract(['css-loader']);
+        sassLoader = extractCSS.extract(['css-loader', 'sass-loader']);
 
         plugins.push(
             extractCSS,
             new UglifyJsPlugin({
-                compress: {
-                    warnings: false
-                },
-                output: {
-                    comments: false
-                },
-                mangle: {
-                    except: ['$', 'exports', 'require']
-                }
+				uglifyOptions: {
+					compress: {
+						warnings: false
+					},
+					output: {
+						comments: false
+					},
+					mangle: {
+						except: ['$', 'exports', 'require']
+					}
+			    }
             }),
             new webpack.NoEmitOnErrorsPlugin()
         )
@@ -89,44 +99,58 @@ module.exports =function(options){
         }),
 		output: {
 			filename: '[name].js',
-			path: path.resolve(__dirname, 'dist/scripts/'),
+			path: path.resolve(__dirname, 'dist/'),
 			chunkFilename: '[chunkhash:8].chunk.js',
             publicPath: publicPath			
 		},
 		module: {
 			rules: [
 			{
-				test: /\.s[ac]ss$/,
-				exclude: /node_modules/,
-				loader: ['style-loader','css-loader','sass-loader']
-			},
-			{
-				test: /\.css$/, loader: cssLoader
+				test: /\.css$/,
+                exclude: /node_modules/,
+				loader: cssLoader
 			},
             {   
-			    test: /\.scss$/, loader: sassLoader
+			    test: /\.scss$/, 
+				exclude: /node_modules/,
+				include: path.resolve(__dirname, "src/sass"),
+				loader: sassLoader
 			},
 			{
 				test: /\.((woff2?|svg)(\?v=[0-9]\.[0-9]\.[0-9]))|(woff2?|svg|jpe?g|png|gif|ico)$/,
-				loader: [
+				loader:[
 					//小于10KB的图片会自动转成dataUrl，
 					'url-loader?limit=10000&name=img/[hash:8].[name].[ext]',
 					'image-webpack-loader?{bypassOnDebug:true, progressive:true,optimizationLevel:3,pngquant:{quality:"65-80",speed:4}}'
 				]
-            }
-			]
+            },
+			{
+				test: /\.(js|vue|jsx)$/,
+				exclude: /node_modules/,
+				use: [{
+				  loader:'babel-loader',  
+				  options: {
+					 presets: ['es2015']
+				  }
+				}]
+			}]
 		},
 		resolve: {			 
-            alias: pathMap,
+            alias: {
+			  "zepto": "scripts/lib/zepto.js",
+			  "jquery": "scripts/lib/jquery-1.12.4.js",
+			  "avalon": "scripts/lib/avalon.shim.js",
+			  "commonCss":"styles/common.css"
+			},
 			extensions: ['.js', '.css', '.scss', '.tpl', '.png', '.jpg']
 		},
 		plugins: plugins ,
 		devServer: {
 			contentBase: path.join(__dirname, './src'),
-			host: 'localhost',  //建议写IP地址，开发时候电脑的ip地址。localhost我不知道是幻觉还是怎样，有时候热刷新不灵敏
-			port: 8081, //默认9090
-			//inline: true,
-			//hot: true		
+			host: '192.168.1.26',  
+			port: 8081,
+			inline: true,
+			hot: true		
 		}
 	}
 	

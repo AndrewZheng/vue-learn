@@ -4,10 +4,14 @@ webpackJsonp([0],[
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
 /**
- * Created by sloong on 2016/6/1.
+ * Created by andrew on 2017/9/19.
  */
 __webpack_require__(3);
+consoloe.log("u are monster");
 
 /***/ }),
 /* 3 */

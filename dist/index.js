@@ -2,13 +2,17 @@ webpackJsonp([1],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
 /**
- * Created by sloong on 2016/6/1.
+ * Created by andrew on 2017/9/19.
  */
 //在pathmap.json 里面配置了commons.css的alias别名 commonCss
-//require('commonCss');
+//import commonCss from 'commonCss';
 __webpack_require__(1);
 //jquery 测试
+console.log("mother fucker");
 
 /***/ }),
 /* 1 */
