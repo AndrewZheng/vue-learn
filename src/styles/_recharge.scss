@@ -1,0 +1,66 @@
+.m-recharge{
+   position:relative;
+   top:-80px;
+   padding-left:15px;
+   padding-bottom:20px;
+   margin:0 15px 10px;
+   margin-bottom: -80px;
+   background-color:$brandWhite;
+   @include rounded-circle-value(20px);
+     
+   h4{
+      height:3rem;
+      line-height:3rem;
+      border-bottom:1px solid $brandGrey;
+      color:$brandColor-H;
+   }
+   
+   .m-monery-sel{
+       padding:1rem 0;
+       color:$brandColor-S;
+       font-size: 1.3rem;
+       
+       label{
+           line-height: 20px;
+       }
+   }
+   
+   .m-money-input{
+       font-size: 1.3rem;
+       color:$brandColor-S;
+       padding-right:10px;
+       
+       input{
+           border:1px solid $brandGrey;
+           color:$brandColor-H;
+           padding:.3rem;
+           margin-bottom:.8rem;
+           background-color:$bgGreyLight;
+       }
+   }
+   
+   .m-settle{
+       margin-top:1.3rem;
+       
+       .u-btn-brown{
+          padding: .8rem 6rem;
+          font-size: 1.5rem;
+       }
+   }
+  
+}
+
+.m-recharge-rules{
+	   color:$brandColor-S;
+	   margin:20px 25px;
+	    
+       h4{
+         margin-bottom:.4rem;   
+       }
+       
+       li{
+            line-height: 2rem;
+		    font-size: 1.4rem;
+		    text-align: left;
+       }
+}

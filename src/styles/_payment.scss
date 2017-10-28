@@ -1,0 +1,574 @@
+
+.success-pay p {
+    margin: 10px auto;
+}
+
+.item1 {
+    height: 150px;
+    position: absolute;
+    top: 25%;
+    width: 250px;
+    padding: 30px;
+    text-align: center;
+    -webkit-transition: top 1.2s linear;
+    transition: top 1.2s linear;
+}
+
+.clipped-box {
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    left: 180px;
+    
+    img {
+	    position: absolute;
+	    top: auto;
+	    left: 0;
+	    bottom: 0;
+	    -webkit-transition: -webkit-transform 1.4s ease-in,background .3s ease-in;
+	    -moz-transition:-moz-transform 1.4s ease-in;
+	    transition: transform 1.4s ease-in;
+	}
+}
+
+
+.success-icon {
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+    color: $brandRed;
+    margin-top: 4.5rem;
+    
+    h3 {
+        margin-top: 1rem;
+    }
+}
+
+.complete-box {
+    padding: .8rem 1.1rem;
+    
+    .btn-custom {
+        border-radius: 3rem;
+        padding: .5rem 1.4rem;
+        font-size: 1.8rem;
+        margin:0;
+    }
+    
+    .btn-white{
+		background: $brandWhite;
+	    color: $brandRed !important;
+	    border: 1px solid $brandRed;
+	    
+	    &:hover{
+			color:$brandWhite !important;
+		}
+	}
+	
+	p{
+		margin:.4rem auto 1.7rem;
+	}
+}
+	
+.award-text {
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    
+    span {
+        font-size: 14px;
+        color: $brandRed;
+    }
+}
+
+
+.price_box {
+    padding: 0;
+    margin-bottom: 59px;
+    
+    li {
+	    border-bottom: 1px solid $brandGrey;
+	    padding: 10px;
+	    font-size: 1.4rem;
+	    text-align: left;
+	}
+	
+	.last_price {
+	    font-size: 1.6rem;
+	    color: $brandRed;
+	}
+	
+	.price_text {
+	    color: $brandRed;
+	    float: right;
+	}
+}
+
+.payment-page{
+
+	#addressDiv {
+	    min-height: 50px;
+	}
+	.info-tittle {
+	    float: left;
+	    padding-left: 10px;
+	    font-size: 1.4rem;
+	    color: $brandColor-M;
+	}
+	
+	#rcvname_text {
+	    margin-left: 20px;
+	    font-size: 1.2rem;
+	}
+	
+	.bottom-empty {
+	    bottom: 100px;
+	}
+    .btn-cancel {
+	    text-align: center;
+	}
+} 
+
+.custom-dialog {
+    width: 220px;
+    padding: 1rem;
+    background: rgba(0,0,0,.7);
+    border-radius: 8px;
+    -webkit-radius: 8px;
+    -moz-radius: 8px;
+    text-align: center;
+    display: none;
+    @include absolute-center;
+    
+    img {
+	    height: 3.5rem;
+	    margin-bottom: .5rem;
+	}
+    p {
+	    color: $brandWhite;
+	    font-size: 1.8rem;
+	}
+}
+
+.receiver-info {
+    height: 25px;
+    width: 100%;
+    font-size: 1.2rem;
+    
+	div:first-child {
+	    float: left;
+	    width: 25px;
+	}
+	
+	div:last-child {
+	    float: left;
+	    margin-left: 10px;
+	}
+}
+
+.address-info {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    font-size: 1.2rem;
+    
+    div:first-child {
+	    float: left;
+	    width: 10%;
+	}
+	
+	div:last-child {
+	    float: left;
+	    width: 80%;
+	    margin-left: 10px;
+	}
+}
+
+.store-address span {
+    font-size: 16px;
+}
+
+.btn-balance {
+    position: fixed;
+    color: $brandColor-M;
+    curor: pointer;
+    right: 10px;
+    font-size: 1.2rem;
+}
+
+.balance-box {
+    margin-top: 81px;
+    line-height: 30px;
+    
+    img {
+	    height: 80px;
+	    margin-bottom: 1.3rem;
+	}
+	
+	.rest {
+	    font-size: 1.6rem;
+	    color: $brandColor-H;
+	}
+	
+	.sum {
+	    font-size: 1.8rem;
+	    color: $brandRed;
+	}
+}
+
+.btn-operation {
+    padding: 0 1.3rem;
+    margin-top: 1.7rem;
+    
+    .btn-custom {
+	    border-radius: 3rem;
+	    padding: .8rem 1.4rem;
+	    font-size: 1.6rem;
+	}
+	
+	.btn-white {
+	    background: $brandWhite;
+	    color: $brandRed !important;
+	    font-weight: 400;
+	    border: 1px solid $brandRed;
+	    border-radius: 3rem;
+	    padding: .8rem 1.4rem;
+	    font-size: 1.6rem;
+	    
+	    &:hover {
+		    background-color: $brandRed;
+		    color:$brandWhite !important;
+		}
+	}
+}
+
+.my-balance-detail .tab, .my-coupon .tab {
+    width: 100%;
+    border-collapse: collapse;
+    
+    tr{
+	    font-size: 1.2rem;
+	    color: $brandColor-H;
+	    border-bottom: 1px solid $brandGrey;
+	    height: 40px;
+	    line-height: 40px;
+    }
+}
+
+.my-coupon {
+    background-color: white;
+    
+    .tab thead tr {
+	    height: 36px;
+	    border-bottom: 1px solid $brandGrey;
+	    font-size: 1.4rem;
+	    font-weight: 400;
+	    color: $brandColor-M;
+	}
+	
+    #no_pro {
+	    margin-top: nth($NavHeight,1);
+	    padding-top: 30%;
+	}
+}
+
+.coupon-list {
+    padding: 5px 10px 5px 10px;
+    
+    .coupon-box {
+	    //background-image: url(../image/icon/bg-coupon.png);
+	    background-repeat: repeat;
+	    padding: 15px 30px 12px 30px;
+	    overflow: hidden;
+	    border-radius: 10px;
+	    margin-top: 5px;
+	    
+	    .coupon-price{
+	       width:30%;
+	       p {
+			    color: $brandRed;
+			    font-size: 1.6rem;
+		   }
+		   span {
+			    font-size: 3.6rem;
+			    font-weight: bold;
+			}
+	    } 
+	}
+}
+
+.coupon-info {
+    margin-left: 20px;
+    text-align: left;
+    
+    p:first-child {
+	    font-size: 1.6rem;
+	    color:$brandColor-H;
+	}
+	
+	p:last-child {
+	    font-size: 1.4rem;
+	    color: $brandRed;
+	    margin-top: 5px;
+	}
+}
+
+#frist_buy{
+		.modal-dialog{
+			width:70%;
+			margin:40% auto;
+			
+		}
+		.modal-content{
+			padding:5px 15px 20px;
+			background-color: rgba(0,0,0,.7);
+			button{
+				font-size: 2.4rem;
+				color:white;
+				}
+			.close-btn{
+				padding:0!important;
+			}
+			p{
+				color: white;
+			    font-size: 1.4rem;
+			    line-height: 2.8rem;
+			}
+			a{
+				color: $brandRed;
+			    font-size: 1.6rem;
+			    text-decoration: underline!important;
+			}
+		}
+
+}
+
+.m-salary{
+    @include line-gradient-bg;
+    height:9.5rem;
+    
+    h2{
+       color:$brandWhite;
+       margin-top:12px;
+       margin-left:24px;
+    }
+    
+    h3{
+       color:$brandWhite;
+       margin-top:10px;
+       margin-left:17px;
+    }
+    
+    h4{
+      color:$brandBrown;
+      margin-top:26px;
+      margin-bottom:11px;
+    }
+    
+    h5{
+      color:$brandWhite;
+      margin-left:12px;
+    }
+    
+}
+
+    
+.m-card-top{
+     height:12.9rem;  
+     margin:-15px 10px 5px; 
+     background-color:$brandWhite;
+     border-radius:20px 20px 0 0;
+     position:relative;
+     padding-top:15px;
+     padding-left:15px;
+     @include card-box-shadow(0px 2px 2px rgba(0,0,0,.2));
+     
+     .row{
+         font-size:1.4rem;
+         color:$brandColor-M;
+         height:4rem;
+         &:not(:last-child){
+            border-bottom:1px solid $brandGrey;
+         }
+         .num{
+           color:$brandColor-H;
+         }   
+     }
+}
+
+.m-card-bottom{
+     margin:0 10px;
+     height:8.7rem;  
+     margin:0px 10px 10px; 
+     background-color:$brandWhite;
+     border-radius:0 0 20px 20px;
+     position:relative;
+     padding-bottom:15px;
+     padding-left:15px;
+     @include card-box-shadow(0px 2px 2px rgba(0,0,0,.2));
+      
+     .row{
+         font-size:1.4rem;
+         color:$brandColor-M;
+         height:4rem;  
+         
+         &:not(:last-child){
+            border-bottom:1px solid $brandGrey;
+         }
+         
+         .tip{
+            color:$brandColor-H;
+            margin-right:0.75rem;
+         } 
+     }
+}
+
+.m-rules{
+    color:$brandColor-S;
+    margin:0 22px;
+    
+    h4{
+       margin-bottom:.4rem;
+    }
+    
+    ol{
+        padding:0;
+        margin:0;
+        padding-left:15px;
+        
+	    li{
+		    display: list-item;
+		    list-style-type: decimal !important;
+		    text-align: -webkit-match-parent;
+		    line-height: 2rem;
+		    font-size: 1.2rem;
+		    text-align: left;
+	    }
+    }
+}
+
+#withdraw_salary{
+
+	 .modal-dialog{
+	    margin:40% 10% 0;
+	    
+	    .modal-content{
+	        height:15.2rem;
+	        @include rounded-circle-value(1.35rem);
+	        
+	        h4{
+	           margin:.8rem 0 1.3rem 0;
+	        }
+	        
+		    .u-money{
+		        margin-bottom:1.8rem;
+		        height:4rem;
+		        font-size: 1.4rem;
+		        background:$bgGreyLight;
+		        border:1px solid $brandGrey;
+		    }
+	    }
+	 }    
+}
+
+.m-bankcard{
+     margin:63px 10px 5px; 
+     padding-left:15px;
+     padding-bottom: 1rem;
+     background-color:$brandWhite;
+     font-size: 1.4rem;
+     @include rounded-circle-value(20px);
+     @include card-box-shadow(0px 2px 2px rgba(0,0,0,.2));
+     
+     .card-bg{
+        margin-left:-15px;
+        height:15px;
+        @include line-gradient-bg;
+     }
+     
+     .weui-cell{
+         padding-left:0;
+         color:$brandColor-M;
+         border-bottom:1px solid $brandGrey;
+         
+         &:last-child:after{
+                content: " ";
+			    position: absolute;
+			    left: 0;
+			    top: 0;
+			    right: 0;
+			    height: 1px;
+			    border-top: 1px solid #e5e5e5;
+			    color: #e5e5e5;
+			    -webkit-transform-origin: 0 0;
+			    transform-origin: 0 0;
+			    -webkit-transform: scaleY(.5);
+			    transform: scaleY(.5);
+			    left: 15px;
+			    z-index: 2;
+         }
+     }
+     
+     .u-btn-confirm{
+         margin-top:1.5rem;
+     }
+}
+
+.m-tab{
+    background-color:$brandWhite;
+    height:4rem;
+    
+    &.bordered{
+       border-bottom:1px solid $brandGrey;
+    }
+    
+    .type:not(:last-child):after{
+        content: " ";
+	    position: absolute;
+	    top: 2px;
+	    right: 0;
+	    height: 4rem;
+	    border-right: 1px solid $brandGrey;
+	    color: $brandGrey;
+	    -webkit-transform-origin: 0 0;
+	    transform-origin: 0 0;
+	    -webkit-transform: scaleY(.5);
+	    transform: scaleY(.5);
+	    z-index: 99;
+    }
+    
+    a{
+       color:$brandColor-S;
+       font-size:1.6rem;
+       
+       &.active{
+         color:$brandBrown;
+         font-size:1.75rem;
+       }
+    }
+}
+
+.m-list-income,.m-list-pay{
+   margin:0 15px;
+   
+   .u-white-box{
+       margin-bottom:10px;
+       height:6rem;
+       padding:0 10px;
+       background-color:$brandWhite;
+       @include rounded-circle-value(20px);
+       @include card-box-shadow(0px 2px 2px rgba(0,0,0,.2));
+       
+       .u-box-l{
+          font-size:1.3rem;
+          color:$brandColor-H;
+          
+          span{
+             color:$brandColor-M;
+          }
+       }
+       
+       .js-profit{
+          font-size:1.6rem;
+          color:$orangeLight;
+       }
+   }
+}

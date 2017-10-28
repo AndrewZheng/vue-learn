@@ -1,0 +1,70 @@
+.g-banner{
+    position:relative;
+    margin-bottom:.8rem;
+    
+	.u-back-rounded{
+	    position:absolute;
+	    top:10px;
+	    left:15px;
+	}
+	img{
+		width:100%;
+	}
+	
+	a{
+	   img{
+	      width:auto;
+	   }
+	}
+}
+
+.m-introduce{
+     padding:0 1.2rem 0.5rem;
+     
+     h4{
+        height:2.5rem;
+        line-height:2.5rem;
+        text-align:center;
+     }
+     
+     p{
+     	margin-top:0.8rem;
+        font-size:1.3rem;
+        color:$brandColor-M;
+     }
+     
+     
+}
+
+.m-standards{
+     padding:.5rem 1.2rem;
+     border-top:1px solid $brandGrey;
+     border-bottom:1px solid $brandGrey;
+     
+    .word{
+       font-size:1.5rem;
+       color:$brandColor-H;
+    }
+    
+    button{
+       margin-right:.5rem;
+       padding: .4rem 1.6rem;
+    }
+}
+
+.m-detail{
+   padding-top:1.4rem;
+   margin-bottom:35px;
+   
+   .m-list-pic{
+      margin-top:1.4rem;
+      padding:0 1.2rem;
+      
+      .m-item{
+         margin-bottom:1rem;
+      }
+      img{
+      	width:100%;
+      }
+   }
+}

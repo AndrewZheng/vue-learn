@@ -1,0 +1,215 @@
+.m-personinfo{
+    height:158px;
+    //background:url('../image/icon-master/bg_me.png') no-repeat scroll 0 0;
+    background-size: contain;
+    position:relative;
+    padding: 0 15px;
+    .u-img{
+	    img{
+	    	border-radius: 50%;
+	    }
+    } 
+    .m-personbox{ 
+       position:relative;
+       top:51px;
+       left:0;
+       height:95px;
+       background-color:$brandWhite;
+       @include rounded-circle-value(20px);
+       
+       h3{
+          color:$brandColor-H;
+          margin-bottom:1rem;
+       }
+       
+       p{
+           color:$brandColor-M;
+           font-size:1.4rem;
+           
+          .money{
+             color:$blueLight;
+             text-decoration: underline;
+          }
+       }
+       
+    }
+    
+}
+
+.m-orderinfo{
+   margin:0 15px 10px;
+   padding:.8rem 0rem 1.6rem; 
+   border-radius:20px 20px 0 0;
+   
+   .m-more{
+      padding:0 1.5rem;
+      height:3rem;
+      font-size:1.5rem;
+      margin-bottom: 1.4rem;
+      .text-right{
+      	 color:$brandColor-M;
+      }
+   }
+   
+   .m-card{
+       box-shadow:none;
+       padding-bottom:0;
+       padding-left:0;
+       h4{
+           color:$brandColor-H;
+           margin-top:.5rem;
+       }
+       
+       img{
+          width:40%;
+       }
+   }
+}
+
+.m-toolkit{
+   margin:0 15px 10px;
+   padding:2rem 0;
+   border-radius:0 0 20px 20px;
+   
+   .m-card{
+       box-shadow:none;
+       padding-bottom:0;
+       padding-left:0;
+       h4{
+         color:$brandColor-H;
+          margin-top:.5rem;
+       }
+       
+       img{
+          width:40%;
+       }
+   }
+}
+
+.m-rest-money{
+   
+    h4{
+    	color:$brandColor-M;
+        margin:15px 0 5px;
+    }
+    
+    span{
+        color:$blueLight;
+        font-size:3rem;
+    } 
+    
+    .u-btn-recharge{
+        margin-top:34px;
+        
+        .u-btn-brown{
+            width:100%;
+            padding: .6rem 2.4rem;
+            font-size:1.8rem;
+            margin-bottom:15px;
+        }
+        
+        p{
+            color:$brandColor-S;
+            font-size:1.4rem;
+        }
+    }
+}
+/* 帮助中心 */
+.m-list-questions{
+      margin-top:58px;
+      
+     .m-item{
+        margin-bottom:15px;
+        
+        .u-question{
+           img{
+             margin-bottom:5px;
+             margin-right:10px;
+           }
+           
+           span{
+	           font-size: 1.6rem;
+	           color: $brandColor-H;
+           }
+        }
+        
+        .u-answer{
+        
+            img{
+              margin-right:10px;
+              margin-top: 4px;
+            }
+            
+            p{
+                font-size: 1.4rem;
+                color: $brandColor-M;
+            }
+        }
+     }
+}
+
+.m-modal{
+  
+  .modal-dialog{
+	    margin:40% 10% 0;
+	    
+	    .modal-content{
+	        @include rounded-circle-value(1.35rem);
+	        
+	        h4{
+	           margin:.8rem 0 1.3rem 0;
+	           color:$brandColor-M;
+	        }
+	        
+	        .u-input-title{
+	        	padding-left:0;
+	            border:none;
+	            border-bottom:1px solid $brandGrey;
+	            margin-bottom:5px;
+	            height: 3rem;
+                font-size: 1.4rem;
+                
+	            &::-webkit-input-placeholder{
+	               color:$brandColor-S !important; 
+	            }
+	            
+	            &::-moz-placeholder{
+	               color:$brandColor-S !important; 
+	            }
+	        }
+	        
+		    .u-textarea-content{
+		        margin-bottom:1.8rem;
+		        height:7rem;
+		        font-size: 1.4rem;
+		        background:$bgGreyLight;
+		        border:1px solid $brandGrey;
+		        
+		        &::-webkit-input-placeholder{
+	               color:$brandColor-S !important; 
+	            }
+	            
+	            &::-moz-placeholder{
+	               color:$brandColor-S !important; 
+	            }
+		    }
+	    }
+	 }    
+}
+
+.bage-boll{
+    position: absolute;
+    top: -7px;
+    right: 28px;
+    z-index: 99;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size:1rem;
+    color:$blueLight;
+    border:1px solid $blueLight;
+    @include rounded-circle;
+    background-color: $brandWhite;
+    @include card-box-shadow(0 1px 0 rgba(0,0,0,.2));
+}

@@ -1,6 +1,6 @@
 {
-  "zepto": "scripts/lib/zepto.js",
-  "jquery": "scripts/lib/jquery-1.12.4.js",
-  "avalon": "scripts/lib/avalon.shim.js",
-  "commonCss":"styles/common.css"
+  "zepto": "./scripts/lib/zepto.js",
+  "jquery": "./scripts/lib/jquery-1.12.4.js",
+  "avalon": "./scripts/lib/avalon.shim.js",
+  "commonCss":"./styles/common.css"
 }

@@ -1,0 +1,128 @@
+.m-cart{
+     position: fixed;
+     bottom: 75px;
+     left: 20px;
+     
+    .cart-content{
+        position:relative;
+        
+        img{
+           vertical-align:middle;
+        }
+        
+		.cart-num {
+		    position:absolute;
+		    z-index: 999;
+		    width: 20px;
+		    height: 20px;
+		    line-height: 16px;
+		    font-size: 1.1rem;
+		    color: $blueLight;
+		    background-color: white;
+		    @include rounded-circle;
+		    border: 2px solid $blueLight;
+		    top:-2px;
+		    right:-2px;
+		    text-align:center;
+		}
+	}
+}
+
+.m-list-food{
+    margin-top:58px;
+    margin-bottom:120px;
+    
+    .m-item{
+        padding:1rem 0.5rem;
+        border-bottom:1px solid $brandGrey;
+        
+       .pro-info{
+           h4{
+              margin-bottom:.5rem;
+              color:$brandColor-H;
+           }
+           
+           h5{
+              margin-bottom:.8rem;
+              color:$brandColor-S;
+           }
+           
+           span{
+              color:$blueLight;
+              font-size:1.5rem;
+           }
+           
+       }
+       
+       .m-opreations{
+       
+          span{
+            display:inline-block;
+            vertical-align: top;
+            
+            &.pro-num{
+                width:1.9rem;
+                height:1.9rem;
+                line-height:1.9rem;
+                text-align:center;
+                font-size:1.5rem;
+            }
+            img{
+            	height:1.9rem;
+            }
+          }
+       }
+    }
+    
+}
+
+.m-settlement{
+    font-size:1.5rem;
+    color:$brandColor-H;
+    bottom:5rem!important;
+    height: 4rem!important;
+    
+	.u-input-selall{
+	    padding-left:10px !important;
+	    
+	    input{
+	      margin-bottom: 3px;
+	    }
+	    
+	    label{
+	       margin-bottom:0;
+	       margin-left: 10px;
+	    }
+	    
+	}
+	
+	.total-num{
+	    color:$blueLight;
+	    margin-left: 10px;
+	}
+	
+	.u-btn-settle{
+	    height: 4rem;
+	    line-height:4rem;
+        border-radius: 22px 0 0 0;
+	    background-color:$brandRed;
+	    color:$brandWhite;
+	    font-size: 1.4rem;
+	}
+}
+
+.empty-box{
+
+	.u-empty-pic{
+	   width:35%;
+	}
+	
+	p{
+	   font-size:1.5rem;
+	   color:$brandColor-H;
+	   
+	   a{
+	      text-decoration: underline !important;
+	   }
+	}
+}
